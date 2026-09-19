@@ -1,4 +1,35 @@
-#include<stdio.h>
+struct student
+{
+	int rollno;
+	char name[10];
+	int marks;
+	
+};
+
+void store(struct student *s)
+{
+	printf("Enter rollno:");
+	scanf("%d",&s->rollno);
+	
+	printf("Enter name:");
+	scanf("%s",s->name);
+	
+	printf("Enter marks:");
+	scanf("%d",&s->marks);
+}
+void display(struct student *s)
+{
+	printf("Roll no is : %d\n",s->rollno);
+	printf("name is %s\n",s->name);
+	printf("Marks is %d\n",s->marks);
+}
+
+void main()
+{
+	struct student s1;
+	store(&s1);
+	display(&s1);
+}#include<stdio.h>
 struct student
 {
 	int rollno;
